@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@theme {
+    --color-primaryColor: #5956E8;
+    --color-paragraph: #181818;
+    --spacing-container: 1170px; 
+     /* Font Family */
+    --font-inter: "Inter", "sans-serif";
+     /* Font Family */
+     /* Rounded */
+     --radius-10: 10px;
+     /* Rounded */
+     /* Line Height */
+     --spacing-lineHeight: 80px; 
+     /* Line Height */
+     /* Box Shadow */
+     --shadow-boxShadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+
+     /* We Care About Our Customer Experience Too */
+     --shadow-profileShadow: 0px 0px 12px -5px rgba(0,0,0,0.75);
+     /* We Care About Our Customer Experience Too */
+     /* Box Shadow */
+  }
