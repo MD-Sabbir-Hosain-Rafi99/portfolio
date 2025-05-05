@@ -439,8 +439,6 @@
         });
 
 
-
-
         // Banner text changes
         const textElement = document.getElementById("changing-text");
         const texts = [
@@ -454,10 +452,7 @@
             index = (index + 1) % texts.length;
         }
 
-        setInterval(changeText, 3000); // changes every 3 seconds
-
-
-
+        setInterval(changeText, 2000); // changes every 2 seconds
 
         //  Animate on Load 
         window.addEventListener('load', () => {
@@ -468,9 +463,6 @@
         });
 
 
-
-
-
         function showModal(imageSrc) {
             document.getElementById('modalImage').src = imageSrc;
             document.getElementById('imageModal').classList.remove('hidden');
@@ -479,8 +471,6 @@
         function closeModal() {
             document.getElementById('imageModal').classList.add('hidden');
         }
-
-
 
         // Contact form alert
         function handleSubmit(e) {
