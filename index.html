@@ -14,9 +14,29 @@
     <!-- Google Fonts End -->
     <link rel="stylesheet" href="src/output.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade {
+            animation: fadeText 6s infinite;
+        }
+
+        @keyframes fadeText {
+
+            0%,
+            100% {
+                opacity: 1;
+                content: "Hi, I am MD Sabbir Hosain Rafi";
+            }
+
+            50% {
+                opacity: 0;
+                content: "I am Front End Developer";
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- NavBar Start -->
     <nav class="bg-black shadow-md fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -62,6 +82,27 @@
                 CV</a>
         </div>
     </nav>
+    <!-- NavBar End -->
+
+    <!-- Banner Section Start -->
+    <section class="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+        <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-12">
+            <!-- Left: Text -->
+            <div class="text-center md:text-left space-y-4">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-pink-600" id="changing-text">
+                    Hi, I am MD Sabbir Hosain Rafi
+                </h1>
+                <p class="text-lg text-gray-600">Welcome to my portfolio website.</p>
+            </div>
+
+            <!-- Right: Image -->
+            <div class="flex justify-center md:justify-end">
+                <img src="images/banner2.png" alt="Sabbir Rafi"
+                    class="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover rounded-full shadow-lg" />
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section Start -->
 
     <script>
         // Toggle mobile menu
@@ -71,6 +112,25 @@
         menuToggle.addEventListener("click", () => {
             mobileMenu.classList.toggle("hidden");
         });
+
+
+
+
+
+        const textElement = document.getElementById("changing-text");
+        const texts = [
+            "Hi, I am MD Sabbir Hosain Rafi",
+            "I am Front End Developer"
+        ];
+        let index = 0;
+
+        function changeText() {
+            textElement.textContent = texts[index];
+            index = (index + 1) % texts.length;
+        }
+
+        setInterval(changeText, 3000); // changes every 3 seconds
+
     </script>
 </body>
 
